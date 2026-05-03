@@ -1,14 +1,14 @@
 # minimal-tunnel
 
-**Connect your local database to Minimal — no open ports, no firewall rules, no VPN.**
+**Connect your local database to [Minimal](https://littlebit.in) — no open ports, no firewall rules, no VPN.**
 
-`minimal-tunnel` is a lightweight agent you run on the machine where your database lives. It opens a single outbound encrypted connection to Minimal, letting you use the full Minimal feature set against a database that is not publicly accessible. Setup takes under a minute.
+`minimal-tunnel` is a lightweight program you run on the machine where your database lives. It opens a single outbound encrypted connection to Minimal test infrastructure, letting you experience the full Minimal feature set against a database that is running locally on your system. Setup takes under a minute.
 
 ---
 
 ## How it works
 
-The agent dials out over TLS on port 443 — the same port used by HTTPS. Your database never needs to be exposed to the internet. Minimal routes queries through the tunnel in both directions.
+The agent dials out over TLS on port 443 — the same port used by HTTPS. Your database **never** needs to be exposed to the internet, to experience Minimal. Minimal routes queries through the tunnel in both directions.
 
 ```
 Your machine                        Minimal
@@ -23,7 +23,7 @@ Your machine                        Minimal
 
 - **Outbound-only.** The agent only dials out. Nothing on your machine listens for external traffic.
 - **Port-scoped.** Traffic is forwarded exclusively to the local port you specify — nothing else on your machine is reachable through the tunnel.
-- **Session-bound.** Each tunnel is tied to a short-lived code generated in the Minimal UI. The code expires in minutes if unused.
+- **Session-bound.** Each tunnel is tied to a short-lived code generated in the [Minimal UI](https://littlebit.in/try) . The code expires in minutes if unused.
 - **Stops cleanly.** Press Ctrl+C at any time. The tunnel closes immediately and the session is invalidated.
 
 ---
@@ -118,7 +118,7 @@ https://host:port
 ./minimal-tunnel-darwin-arm64 \
   --code        ABC123 \
   --local-port  5432 \
-  --server      tunnel.minimal.in
+  --server      play.autoapi.littlebit.in
 ```
 
 **MySQL on a non-standard port:**
@@ -126,8 +126,26 @@ https://host:port
 ```bash
 ./minimal-tunnel-darwin-arm64 \
   --code        XYZ789 \
-  --local-port  3307 \
-  --server      tunnel.minimal.in
+  --local-port  3807 \
+  --server      play.autoapi.littlebit.in
+```
+
+**ClickHouse on a non-standard port:**
+
+```bash
+./minimal-tunnel-darwin-arm64 \
+  --code        XYZ789 \
+  --local-port  9900 \
+  --server      play.autoapi.littlebit.in
+```
+
+**MariaDB on a non-standard port:**
+
+```bash
+./minimal-tunnel-darwin-arm64 \
+  --code        XYZ789 \
+  --local-port  3407 \
+  --server      play.autoapi.littlebit.in
 ```
 
 ---
@@ -174,11 +192,10 @@ The tunnel to Minimal connected successfully, but the agent could not reach your
 `minimal-tunnel` forwards raw TCP. It works with any database or service that communicates over TCP:
 
 - PostgreSQL
-- MySQL / MariaDB
-- MongoDB
-- Microsoft SQL Server
-- Redis
 - ClickHouse
+- MySQL
+- MariaDB
+
 
 No driver changes, no ORM configuration, and no client-side modifications are required. Connect to the database exactly as you normally would — the tunnel is transparent to both sides.
 
@@ -186,4 +203,4 @@ No driver changes, no ORM configuration, and no client-side modifications are re
 
 ## Disclaimer
 
-`minimal-tunnel` is provided as-is, without warranty of any kind, express or implied. By downloading and running this software, you accept full responsibility for its use on your systems and infrastructure. Littlebit Labs bears no liability for data loss, data corruption, unauthorised access, security incidents, or any other damages — direct, indirect, or consequential — arising from your use of this software. You are solely responsible for securing your database credentials, your local network configuration, and the environment in which this agent runs. Before deploying this agent in a production or regulated environment, review the [source code](https://github.com/littlebitlabs/minimal-tunnel) and confirm its behaviour meets your organisation's security requirements. Continued use of this software constitutes acceptance of these terms.
+`minimal-tunnel` is provided as-is, without warranty of any kind, express or implied. By downloading and running this software, you accept full responsibility for its use on your systems and infrastructure. Littlebit Labs bears no liability for data loss, data corruption, unauthorised access, security incidents, or any other damages — direct, indirect, or consequential — arising from your use of this software. You are solely responsible for securing your database credentials, your local network configuration, and the environment in which this agent runs. Continued use of this software constitutes acceptance of these terms.
