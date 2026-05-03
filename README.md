@@ -42,19 +42,17 @@ Your machine                        Minimal
 
 The agent does not inspect database traffic. Your database's own authentication — passwords, TLS, certificates — applies end-to-end without modification.
 
-The [source code](https://github.com/littlebitlabs/minimal-tunnel) is publicly available. Review it before deploying in environments with strict security requirements.
-
 ---
 
 ## Download
 
 | Platform | Download |
 |---|---|
-| macOS — Apple Silicon | [minimal-tunnel-darwin-arm64](https://github.com/littlebitlabs/minimal-tunnel/releases/latest/download/minimal-tunnel-darwin-arm64) |
-| macOS — Intel | [minimal-tunnel-darwin-amd64](https://github.com/littlebitlabs/minimal-tunnel/releases/latest/download/minimal-tunnel-darwin-amd64) |
-| Linux — x86-64 | [minimal-tunnel-linux-amd64](https://github.com/littlebitlabs/minimal-tunnel/releases/latest/download/minimal-tunnel-linux-amd64) |
-| Linux — ARM64 | [minimal-tunnel-linux-arm64](https://github.com/littlebitlabs/minimal-tunnel/releases/latest/download/minimal-tunnel-linux-arm64) |
-| Windows — x86-64 | [minimal-tunnel-windows-amd64.exe](https://github.com/littlebitlabs/minimal-tunnel/releases/latest/download/minimal-tunnel-windows-amd64.exe) |
+| macOS — Apple Silicon | [minimal-tunnel-darwin-arm64](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-darwin-arm64) |
+| macOS — Intel | [minimal-tunnel-darwin-amd64](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-darwin-amd64) |
+| Linux — x86-64 | [minimal-tunnel-linux-amd64](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-linux-amd64) |
+| Linux — ARM64 | [minimal-tunnel-linux-arm64](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-linux-arm64) |
+| Windows — x86-64 | [minimal-tunnel-windows-amd64.exe](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-windows-amd64.exe) |
 
 Make the binary executable on macOS and Linux before running it:
 
