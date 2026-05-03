@@ -102,13 +102,6 @@ No further steps needed. Run the agent as normal from this point on.
 | `--local-port` | Yes | Port your database is listening on locally |
 | `--server` | Yes | Tunnel server address provided by Minimal |
 
-`--server` accepts any of the following formats:
-
-```
-host:port
-http://host:port
-https://host:port
-```
 
 ### Examples
 
@@ -118,7 +111,7 @@ https://host:port
 ./minimal-tunnel-darwin-arm64 \
   --code        ABC123 \
   --local-port  5432 \
-  --server      play.autoapi.littlebit.in
+  --server      https://play.autoapi.littlebit.in
 ```
 
 **MySQL on a non-standard port:**
@@ -127,7 +120,7 @@ https://host:port
 ./minimal-tunnel-darwin-arm64 \
   --code        XYZ789 \
   --local-port  3807 \
-  --server      play.autoapi.littlebit.in
+  --server      https://play.autoapi.littlebit.in
 ```
 
 **ClickHouse on a non-standard port:**
@@ -136,7 +129,7 @@ https://host:port
 ./minimal-tunnel-darwin-arm64 \
   --code        XYZ789 \
   --local-port  9900 \
-  --server      play.autoapi.littlebit.in
+  --server      https://play.autoapi.littlebit.in
 ```
 
 **MariaDB on a non-standard port:**
@@ -145,7 +138,7 @@ https://host:port
 ./minimal-tunnel-darwin-arm64 \
   --code        XYZ789 \
   --local-port  3407 \
-  --server      play.autoapi.littlebit.in
+  --server      https://play.autoapi.littlebit.in
 ```
 
 ---
