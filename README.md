@@ -48,11 +48,11 @@ The agent does not inspect database traffic. Your database's own authentication 
 
 | Platform | Download |
 |---|---|
-| macOS — Apple Silicon | [minimal-tunnel-darwin-arm64](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-darwin-arm64) |
-| macOS — Intel | [minimal-tunnel-darwin-amd64](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-darwin-amd64) |
-| Linux — x86-64 | [minimal-tunnel-linux-amd64](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-linux-amd64) |
-| Linux — ARM64 | [minimal-tunnel-linux-arm64](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-linux-arm64) |
-| Windows — x86-64 | [minimal-tunnel-windows-amd64.exe](https://github.com/littlebitlabs/Minmux/dist/minimal-tunnel-windows-amd64.exe) |
+| macOS — Apple Silicon | [minimal-tunnel-darwin-arm64](https://github.com/littlebitlabs/Minmux/blob/main/dist/minimal-tunnel-darwin-amd64) |
+| macOS — Intel | [minimal-tunnel-darwin-amd64](https://github.com/littlebitlabs/Minmux/blob/main/dist/minimal-tunnel-darwin-amd64) |
+| Linux — x86-64 | [minimal-tunnel-linux-amd64](https://github.com/littlebitlabs/Minmux/blob/main/dist/minimal-tunnel-linux-amd64) |
+| Linux — ARM64 | [minimal-tunnel-linux-arm64](https://github.com/littlebitlabs/Minmux/blob/main/distminimal-tunnel-linux-arm64) |
+| Windows — x86-64 | [minimal-tunnel-windows-amd64.exe](https://github.com/littlebitlabs/Minmux/blob/main/dist/minimal-tunnel-windows-amd64.exe) |
 
 Make the binary executable on macOS and Linux before running it:
 
